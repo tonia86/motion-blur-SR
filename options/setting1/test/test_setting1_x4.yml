@@ -1,0 +1,58 @@
+name: DCLSx4_setting1
+suffix: ~  # add suffix to saved images
+model: blind
+distortion: sr
+scale: 4
+crop_border: 0  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [1]
+pca_matrix_path: ../../../pca_matrix/DCLS/pca_matrix.pth
+
+datasets:
+
+#   test1:
+#     name: DIV2K
+#     mode: GT
+#     is_train: False
+#     dataroot_GT: /tn/diffGAN-srd/data/dataset/research/setting1/DIV2K_valid_HR/DIV2K_valid_HR/
+#     dataroot_LQ: ~ #/tn/diffGAN-srd/data/dataset/crop_40_160/crop_40_160/lr_40 # ~ #/tn/diffGAN-srd/data/dataset/research/setting1/DIV2KRK_DCLS/ #/tn/DCLS-SR/codes/data/dataset/research/setting1/Set14/LRblur/x4/
+
+  test2:
+    name: Set14
+    mode: LQGT
+    dataroot_GT: /tn/Data/unpaired_test/valid-gt-clean/
+    dataroot_LQ: /tn/Data/unpaired_test/valid-input-noisy/
+#     dataroot_GT: /tn/Data/Validation_4/LR_Blur/ #/tn/Data/DVD100/sharp/ #/tn/work3/SRDiff-blindsr-noise/dataset/DIV2K_hr/
+#     dataroot_LQ: /tn/Data/Validation_4/HR/ #/tn/Data/DVD100/blur_bicubic_X4/ #/tn/work3/SRDiff-blindsr-noise/dataset/DIV2K_lr/
+
+#   test3:
+#     name: BSDS100
+#     mode: LQGT
+#     dataroot_GT: /data/dataset/research/setting1/B100/x4HRblur.lmdb
+#     dataroot_LQ: /data/dataset/research/setting1/B100/x4LRblur.lmdb
+
+#   test4:
+#     name: Urban100
+#     mode: LQGT
+#     dataroot_GT: /data/dataset/research/setting1/urban100/x4HRblur.lmdb
+#     dataroot_LQ: /data/dataset/research/setting1/urban100/x4LRblur.lmdb
+
+#   test5:
+#     name: Manga109
+#     mode: LQGT
+#     dataroot_GT: /data/dataset/research/setting1/Manga109/x4HRblur.lmdb
+#     dataroot_LQ: /data/dataset/research/setting1/Manga109/x4LRblur.lmdb
+
+
+#### network structures
+network_G:
+  which_model_G: DCLS
+  setting:
+    nf: 64
+    nb: 10
+    ng: 5
+    input_para: 256
+    kernel_size: 21
+
+#### path
+path:
+  pretrain_model_G: ./pretrained_models/DCLSx4_setting1.pth
