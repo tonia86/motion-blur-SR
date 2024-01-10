@@ -18,7 +18,7 @@ Please go to [https://drive.google.com/file/d/1pKw_8xxeSqE4lzOPLSMlHCVGHvCLssqg/
 
 ### Some Results
 
-[![motion-blur-SR](https://github.com/tonia86/motion-blur-SR/result.png)](https://github.com/tonia86/motion-blur-SR/result.png)
+[![motion-blur-SR](https://github.com/tonia86/motion-blur-SR/blob/main/result.png)](https://github.com/tonia86/motion-blur-SR/blob/main/result.png)
 
 ## Acknowledgments
 
