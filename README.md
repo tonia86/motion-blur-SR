@@ -29,4 +29,4 @@ The test results will be saved to the "./Result" folder of the current directory
 
 ## Acknowledgments
 
-This code is mainly built on [SR3](https://github.com/Janspiry/Image-Super-Resolution-via-Iterative-Refinement) and [DDGAN](https://github.com/NVlabs/denoising-diffusion-gan.git).
+This code is mainly built on [SRDiff](https://github.com/LeiaLi/SRDiff.git) and [DDGAN](https://github.com/NVlabs/denoising-diffusion-gan.git).
