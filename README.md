@@ -2,7 +2,7 @@
 # motion-blur-SR
 
 ## Dependenices
--  einops ==0.6.0
+-  einops == 0.6.0
 -  ninja == 1.11.1
 -  pytorch == 2.0.1
 
