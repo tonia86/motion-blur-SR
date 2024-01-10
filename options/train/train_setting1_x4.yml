@@ -1,5 +1,5 @@
 #### general settings
-name: DCLSx4_setting1
+name: motion-blur-SR
 use_tb_logger: true
 model: blind
 distortion: sr
@@ -7,22 +7,22 @@ scale: 4
 gpu_ids: [1]
 pca_matrix_path: /tn/work3/FSRDiff-blur/pca_matrix/DCLS/pca_matrix.pth
 
-degradation:
-  random_kernel: True
-  ksize: 21
-  code_length: 10
-  sig_min: 0.2
-  sig_max: 4.0
-  rate_iso: 1.0
-  random_disturb: false
+# degradation:
+#   random_kernel: True
+#   ksize: 21
+#   code_length: 10
+#   sig_min: 0.2
+#   sig_max: 4.0
+#   rate_iso: 1.0
+#   random_disturb: false
 
 #### datasets
 datasets:
   train:
     is_train: True
-    name: DIV2K_Flickr2K
+    name: GoPro
     mode: GT
-    dataroot_GT: /tn/diffGAN-srd/data/dataset/DIV2K_Flickr2K/HR.lmdb
+    dataroot_GT: /tn/diffGAN-srd/data/dataset/GoPro/HR.lmdb
 
     use_shuffle: true
     n_workers: 0  # per GPU
@@ -36,12 +36,12 @@ datasets:
   val:
     name: Set5
     mode: LQGT
-    dataroot_GT: /tn/Data/test/DIV2K_Gaussian_hr/
-    dataroot_LQ: /tn/Data/test/DIV2K_Gaussian_lr/
+    dataroot_GT: /tn/Data/test/GoPro/
+    dataroot_LQ: /tn/Data/test/GoPro/
 
 #### network structures
 network_G:
-  which_model_G: DCLS
+  which_model_G: RM
   setting:
     nf: 64
     nb: 10
