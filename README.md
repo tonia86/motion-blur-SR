@@ -14,7 +14,7 @@
 ## Pre-trained Model
 Please go to [https://drive.google.com/file/d/1pKw_8xxeSqE4lzOPLSMlHCVGHvCLssqg/view?usp=sharing](https://drive.google.com/file/d/1pKw_8xxeSqE4lzOPLSMlHCVGHvCLssqg/view?usp=sharing) to download the pre-trained models, and put it into "./saved_info/dd_gan/motion-blur-sr/blur_sr_gopro/''.
 ## Train & Evaluate
-1.  Modify the configuration files in the "./Options" folder (such as super resolution, GPU usage, etc.).
+1.  Modify the configuration files in the "./options" folder (such as super resolution, GPU usage, etc.).
 2.  Run training/evaluation code. The code is for training on 1 GPU.
 
 ### Train
