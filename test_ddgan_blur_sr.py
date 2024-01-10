@@ -219,7 +219,7 @@ def sample_and_test(args):
 #         test_loader = torch.utils.data.DataLoader(
 #             test_set, batch_size=1, shuffle=False, num_workers=0, pin_memory=True
 #         )
-    root_val_dir = '/tn/Data/Validation_4/'# #----------Validation path
+    root_val_dir = '/tn/Data/Validation_4/'# #----------根据测试图像位置修改路径
     test_loader = DataLoader(DataValSet(root_val_dir), batch_size=1, shuffle=False, pin_memory=False) 
                 
 #     test_loaders = []
@@ -284,7 +284,7 @@ def sample_and_test(args):
 
 
         suffix = opt["suffix"]
-        dataset_dir = '/tn/work3/FSRDiff-blur/Result/blur/t/'
+        dataset_dir = './Result/' #保存的结果位置
         if suffix:
             save_img_path = os.path.join(dataset_dir, str(img_name[0]) + suffix)
         else:
