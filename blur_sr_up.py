@@ -469,8 +469,8 @@ def train(rank, gpu, args):
     batch_size = args.batch_size
 
     #####training dataset#####
-    train_dir = '/tn/Data/GOPRO_train256_4x_HDF5/' #数据集的路径
-    train_sets = [x for x in sorted(os.listdir(train_dir)) if is_hdf5_file(x)] #多个数据集吗？
+    train_dir = '/tn/Data/GOPRO_train256_4x_HDF5/' #在此修改数据集的路径
+    train_sets = [x for x in sorted(os.listdir(train_dir)) if is_hdf5_file(x)] 
     
     #####test dataset#####
     root_val_dir = '/tn/Data/Validation_4x/'# #----------Validation path
